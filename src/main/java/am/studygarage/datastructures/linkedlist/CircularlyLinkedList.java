@@ -22,7 +22,7 @@ public class CircularlyLinkedList<T> {
         if (isEmpty()) {
             return null;
         }
-        return this.tail.next.getElement();
+        return this.tail.getNext().getElement();
     }
 
     public T last() {
