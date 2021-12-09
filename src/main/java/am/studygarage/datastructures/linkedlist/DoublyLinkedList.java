@@ -81,6 +81,38 @@ public class DoublyLinkedList<T> {
         return node.getElement();
     }
 
+    /**
+     * we consider two lists to be equivalent if they have the same length and contents that are
+     * element-by-element equivalent.
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        DoublyLinkedList<?> that = (DoublyLinkedList<?>) o;
+        if (size != that.size()) {
+            return false;
+        }
+
+        Node<?> walkA = header.getNext();
+        Node<?> walkB = that.header.getNext();
+
+        while (walkA != trailer) {
+            if (!walkA.getElement().equals(walkB.getElement())) {
+                return false;
+            }
+
+            walkA = walkA.getNext();
+            walkB = walkB.getNext();
+        }
+
+        return true;
+    }
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder()
