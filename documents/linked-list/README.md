@@ -1,3 +1,10 @@
+# Contents
+
+- [Linked List](#linked-list)
+- [Doubly Linked List](#doubly-linked-list) 
+- [Singly Linked List](#singly-linked-list) 
+- [Circularly Linked List](#circularly-linked-list)
+
 # Linked List
 
 A linked list, in its simplest form, is a collection of **nodes** that collectively form a linear sequence.
