@@ -60,9 +60,11 @@ that node will no longer be considered part of the list and it can be reclaimed 
 | ```removeFirst():``` | Removes and returns the first element of the list. |
 | ```removeLast():``` | Removes and returns the last element of the list. |
 
-[Java class](../../src/main/java/am/studygarage/datastructures/linkedlist/SinglyLinkedList.java)
+[Java class](../../src/main/java/am/studygarage/datastructures/linkedlist/DoublyLinkedList.java)
 
 # Singly Linked List
+
+![Singly Linked List](./singly-linked-list.png)
 
 In a singly linked list, each node stores a reference to an object that is an element of the sequence, as well as a reference to the next node of the list.
 
@@ -83,6 +85,8 @@ supports the following methods:
 [Java class](../../src/main/java/am/studygarage/datastructures/linkedlist/SinglyLinkedList.java)
 
 # Circularly Linked List
+
+![Circularly Linked List](./circularly-linked-list.png)
 
 Linked lists are traditionally viewed as storing a sequence of items in a linear order, from first 
 to last. However, there are many applications in which data can be more naturally viewed as having a
