@@ -4,10 +4,11 @@
 - [Stack ADT](#stack-adt)
 - [Array based implementation of Stack](#array-based-implementation-of-stack)
 - [Linked List based implementation of Stack](#linked-list-based-implementation-of-stack)
+- [Efficiency of Implementations](#efficiency-of-implementations)
 
 # Stack
-A stack is a collection of objects that are inserted and removed according to the last-in, first-out
-(**LIFO**) principle. A user may insert objects into a stack at any time, but may only access or 
+A stack is a collection of objects that are inserted and removed according to the **last-in, first-out
+(LIFO)** principle. A user may insert objects into a stack at any time, but may only access or 
 remove the most recently inserted object that remains (at the so-called “top” of the stack).
 
 ## Use cases examples
@@ -35,6 +36,8 @@ The array implementation of a stack is simple and efficient. Nevertheless, this 
 one negative aspect it relies on a fixed-capacity array, which limits the ultimate size of the stack.
 If the application needs much less space than the reserved capacity, memory is wasted.
 
+[Java class](../../src/main/java/am/studygarage/datastructures/stack/ArrayStack.java)
+
 # Linked List based implementation of Stack
 Stack interface can be easily implemented using a singly linked list for storage.
 We use adapter design pattern approach here.
@@ -45,3 +48,14 @@ contains an instance of the existing class as a hidden field, and then to implem
 method of the new class using methods of this hidden instance variable.
 By applying the adapter pattern in this way, we have created a new class that performs some
 of the same functions as an existing class, but repackaged in a more convenient way.
+
+[Java class](../../src/main/java/am/studygarage/datastructures/stack/LinkedStack.java)
+
+# Efficiency of Implementations
+Also, although all methods execute in constant time for both implementations, it seems clear that
+the operations involving linked lists have a large number of primitive operations per call.
+For example, adding an element to an array-based queue consists primarily of calculating an index
+with modular arithmetic, storing the element in the array cell, and incrementing the size counter.
+For a linked list, an insertion includes the instantiation and initialization of a new node,
+relinking an existing node to the new node, and incrementing the size counter.
+In practice, this makes the linked-list method more expensive than the array-based method.
