@@ -60,5 +60,7 @@ public interface Tree<E> extends Iterable<E> {
     boolean isEmpty();
 
     @Override
-    Iterator<E> iterator(); Iterable<Position<E>> positions();
+    Iterator<E> iterator();
+
+    Iterable<Position<E>> positions();
 }

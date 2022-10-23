@@ -165,11 +165,6 @@ public class LinkedBinaryTree<E> extends AbstractBinaryTree<E> {
         return new ElementsIterator();
     }
 
-    @Override
-    public Iterable<Position<E>> positions() {
-        return null;
-    }
-
     private class ElementsIterator implements Iterator<E> {
 
         Iterator<Position<E>> positionIterator = positions().iterator();
