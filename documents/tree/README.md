@@ -155,6 +155,16 @@ for each child c in children(p) do
 perform the “visit” action for position p // this happens after any recursion
 ```
 
+### Inorder Traversal
+
+For many applications of binary trees an inorder traversal is the most natural order.
+During an inorder traversal, we visit a position between the recursive traversals of its left and right subtrees.
+The inorder traversal of a binary tree T can be informally viewed as visiting the nodes of T “from left to right.”
+Indeed, for every position p, the inorder traversal visits p after all the positions in the left subtree of
+p and before all the positions in the right subtree of p.
+
+![Tree Inorder Traversal](tree-inorder-traversal.png)
+
 ## Breadth-First Tree Traversal
 
 Visiting Tree level-by-level. The process is not recursive, since we are not traversing entire subtrees at once. 
@@ -169,7 +179,3 @@ Initialize queue Q to contain root()
   **for** position p for each child c in children(p) **do**
     Q.enqueue(c)
 ```
-
-## Inorder Traversal
-
-For many applications of binary trees an inorder traversal is the most natural order.
