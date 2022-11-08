@@ -1,4 +1,4 @@
-package am.studygarage.datastructures;
+package am.studygarage.datastructures.tree;
 
 import am.studygarage.datastructures.tree.ArrayBinaryTree;
 import am.studygarage.datastructures.tree.Position;

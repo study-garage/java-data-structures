@@ -151,7 +151,7 @@ Pseudo code:
 
 ```
 for each child c in children(p) do
-  preorder(c) // recursively traverse the subtree rooted at c
+  postorder(c) // recursively traverse the subtree rooted at c
 perform the “visit” action for position p // this happens after any recursion
 ```
 

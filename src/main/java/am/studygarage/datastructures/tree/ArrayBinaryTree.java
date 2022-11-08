@@ -11,6 +11,7 @@ public class ArrayBinaryTree<E> extends AbstractBinaryTree<E> {
 
     private static final int DEFAULT_CAPACITY = 16;
 
+    // TODO remove functionality
     private Object[] treeData;
     private int size;
 
