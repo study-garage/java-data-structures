@@ -59,7 +59,13 @@ public abstract class AbstractPriorityQueue<K, V> implements PriorityQueue<K, V>
         private K key;
         private V value;
 
-        @Override public K getKey() {
+        public PriorityQueueEntry(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        @Override
+        public K getKey() {
             return key;
         }
 
