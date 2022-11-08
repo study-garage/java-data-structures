@@ -3,9 +3,11 @@ package am.studygarage.datastructures.priorityqueue;
 import am.studygarage.datastructures.common.Entry;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
 
-public class Heap<K, V> extends AbstractPriorityQueue<K, V>{
+public class Heap<K, V> extends AbstractPriorityQueue<K, V> {
+    private int operations = 0;
     private final ArrayList<Entry<K, V>> heap = new ArrayList<>();
 
     public Heap() {
@@ -14,6 +16,26 @@ public class Heap<K, V> extends AbstractPriorityQueue<K, V>{
 
     public Heap(Comparator<K> comparator) {
         super(comparator);
+    }
+
+    /**
+     * Creates a heap from the collection using the given comparator to order keys.
+     */
+    public Heap(Collection<Entry<K, V>> entries, Comparator<K> comparator) {
+        super(comparator);
+        heap.addAll(entries);
+        heapify();
+    }
+
+    /**
+     * Performs a bottom-up construction of the heap in linear time.
+     */
+    protected void heapify() {
+        // start at parent of last entry
+        int startIndex = parent(size() - 1);
+        for (int j = startIndex; j >= 0; j--) { // loop until processing the root
+            downheap(j);
+        }
     }
 
     protected int parent(int index) {
@@ -50,6 +72,7 @@ public class Heap<K, V> extends AbstractPriorityQueue<K, V>{
      */
     protected void upheap(int index) {
         while (index > 0) { // root
+            operations++;
             int parentIndex = parent(index);
             if (compare(heap.get(index), heap.get(parentIndex)) >= 0) { // proper heap
                 break;
@@ -64,6 +87,7 @@ public class Heap<K, V> extends AbstractPriorityQueue<K, V>{
      */
     protected void downheap(int index) {
         while (hasLeft(index)) { // bottom
+            operations++;
             int leftIndex = left(index);
             int smallChildIndex = leftIndex;
             if (hasRight(index)) {
@@ -120,5 +144,9 @@ public class Heap<K, V> extends AbstractPriorityQueue<K, V>{
     @Override
     public int size() {
         return heap.size();
+    }
+
+    int getOperations() {
+        return operations;
     }
 }
