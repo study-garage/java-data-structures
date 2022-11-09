@@ -1,5 +1,6 @@
 package am.studygarage.datastructures.tree;
 
+import am.studygarage.datastructures.common.Position;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

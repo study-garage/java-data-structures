@@ -1,5 +1,7 @@
 package am.studygarage.datastructures.tree;
 
+import am.studygarage.datastructures.common.Position;
+
 public interface BinaryTree<E> extends Tree<E> {
 
     /**

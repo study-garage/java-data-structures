@@ -1,5 +1,7 @@
 package am.studygarage.datastructures.tree;
 
+import am.studygarage.datastructures.common.Position;
+
 import java.util.Iterator;
 
 public class LinkedBinaryTree<E> extends AbstractBinaryTree<E> {

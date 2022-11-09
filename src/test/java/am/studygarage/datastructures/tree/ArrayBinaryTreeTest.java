@@ -1,7 +1,6 @@
 package am.studygarage.datastructures.tree;
 
-import am.studygarage.datastructures.tree.ArrayBinaryTree;
-import am.studygarage.datastructures.tree.Position;
+import am.studygarage.datastructures.common.Position;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
